@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  background: #ebf2f5;
+}
+
+/*Separado porque estes elementos têm uma font-family própria e assim assegura que ficam com o mesmo tipo de font*/
+body,
+input,
+button,
+textarea {
+  font: 600 16px Nunito, sans-serif;
+}
