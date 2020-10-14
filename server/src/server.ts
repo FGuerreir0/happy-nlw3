@@ -1,9 +1,27 @@
 import express from 'express';
 
-const app = express();
+import './database/connection';
+import routes from './routes';
 
-app.get('/users', (req, res, error) => {
-  return res.json({ message: 'Works' });
-});
+const app = express();
+app.use(express.json());
+
+app.use(routes);
 
 app.listen(3010);
+
+/*---------DRIVER NATIVE
+Executa todo o query no node
+
+EX: sqlite3.query('SELECT * from users')
+
+//---------QUERY  BUILDER
+Query escrita em Javascript, que depois é convertido para o node 
+
+EX: knex('users).select('*').where('country', 'portugal')
+
+//---------ORM (Utilizado neste projecto)
+OBJECT RELATIONAL MAPPING
+
+Faz uso de classes para cada tabela e faz relação directa com objectos
+*/
