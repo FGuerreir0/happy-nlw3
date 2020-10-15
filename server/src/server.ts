@@ -17,17 +17,17 @@ app.use(errorHandler);
 
 app.listen(3010);
 
-/*---------DRIVER NATIVE
+/*--------- DRIVER NATIVE
 Executa todo o query no node
 
 EX: sqlite3.query('SELECT * from users')
 
-//---------QUERY  BUILDER
+//--------- QUERY  BUILDER
 Query escrita em Javascript, que depois é convertido para o node 
 
 EX: knex('users).select('*').where('country', 'portugal')
 
-//---------ORM (Utilizado neste projecto)
+//--------- ORM (Utilizado neste projecto)
 OBJECT RELATIONAL MAPPING
 
 Faz uso de classes para cada tabela e faz relação directa com objectos
