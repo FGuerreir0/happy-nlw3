@@ -5,6 +5,7 @@ import Orphanage from './Orphanage';
 export default class Image {
   @PrimaryGeneratedColumn('increment')
   id: number;
+
   @Column()
   path: string;
 
